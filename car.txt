@@ -1,0 +1,11 @@
+
+Mercedenz,Mecanico,Azul,2001,15423.458960
+Ford,Mecanico,Rojo,2003,22642.458960
+Ciantro,Automatico,Rojo,2006,32327.458960
+Hiunday,Mecanico,Rojo,1996,15995.458960
+Ciantro,Automatico,Negro,2007,45833.458960
+Hiunday,Automatico,Blanco,1993,16000.458960
+Toyota,Mecanico,Amarillo,2008,41882.458960
+Rnage-Rovers,Automatico,Verde,2012,45544.458960
+Ford,Mecanico,Verde,1990,44376.458960
+BMW,Automatico,Amarillo,2014,25643.458960

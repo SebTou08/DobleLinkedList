@@ -1,7 +1,16 @@
 #ifndef __DOBLELINKEDLIST_H__
 #define __DOBLELINKEDLIST_H__
 #include "car.h"
+#include <iostream>
+#include <sstream>
 
+#include <stdlib.h>
+#include <ctime>
+#include <functional>
+#include <string>
+#include <fstream>
+#include <iomanip>
+using namespace std;
 template <typename TipoGen>
 class DobleLinkedList;
 
@@ -94,9 +103,10 @@ public:
     //AGREGAR CARGANDO DATOS
     void LoadData()
     {
+        std::string registro, tipo, modelo, precio, anio, color;
         ifstream carros("car.txt");
-        string registro, tipo, modelo, precio, año, color;
-        int _año;
+
+        int _anio;
         double _precio;
 
         while (getline(carros, registro))
@@ -105,11 +115,11 @@ public:
             getline(ss, modelo, ',');
             getline(ss, tipo, ',');
             getline(ss, color, ',');
-            getline(ss, año, ',');
-            _año = stoi(año);
+            getline(ss, anio, ',');
+            _anio = stoi(anio);
             getline(ss, precio);
             _precio = stod(precio);
-            car *newcar = new car(modelo, tipo, color, _año, _precio);
+            car *newcar = new car(modelo, tipo, color, _anio, _precio);
             FinalAddition(newcar);
         }
     }

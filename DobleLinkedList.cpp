@@ -1,5 +1,7 @@
 #include "DobleLinkedList.h"
 #include "car.h"
+#include<ctime>
+#include<stdlib.h>
 
 
 int main()
@@ -8,7 +10,7 @@ int main()
 
     DobleLinkedList<car*>lista;
     car *carrito[10];
-    lista.LoadData();
+    //lista.LoadData();
     for (size_t i = 0; i<10;++i)
     {
         carrito[i] = new car();
@@ -17,6 +19,7 @@ int main()
 
 
     lista.Show();
+
     lista.BubbleSort();
     cout << "\n ---------listaordenada-------- \n<\n\n";
     lista.Show();

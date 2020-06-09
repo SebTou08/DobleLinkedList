@@ -1,9 +1,9 @@
 #ifndef __CAR_H__
-#define _CAR_H__
+#define __CAR_H__
 
 #include <iostream>
 #include <sstream>
-#include <windows.h>
+
 #include <stdlib.h>
 #include <ctime>
 #include <functional>
@@ -21,7 +21,7 @@ private:
     string modelo;
     string tipo;
     double precio;
-    int año;
+    int anio;
     string color;
 
 public:
@@ -31,23 +31,23 @@ public:
         tipo = tipos[rand() % 2];
         color = colores[rand() % 10];
         precio = rand() % 50000 + 15000.45896;
-        año = rand() % 30 + 1990;
+        anio = rand() % 30 + 1990;
     }
-    car(string _modelo, string _tipo, string _color, int _año, double _precio)
+    car(string _modelo, string _tipo, string _color, int _anio, double _precio)
     {
         modelo = _modelo;
         tipo = _tipo;
         color = _color;
-        año = _año;
+        anio = _anio;
         precio = _precio;
     }
 
-    int getanio() { return año; }
+    int getanio() { return anio; }
     double getprecio() { return precio; }
     string mostrarmodelo() { return "Modelo: " + modelo; }
 
-    string mostrar() { return "\n \t Modelo: " + modelo + "'\n \t Color: " + color + "\n \t Precio: " + to_string(precio) + "\n\t Anio: " + to_string(año) + '\n'; }
-    string save() { return "\n" + modelo + ',' + tipo + ',' + color + ',' + to_string(año) + ',' + to_string(precio); }
+    string mostrar() { return "\n \t Modelo: " + modelo + "'\n \t Color: " + color + "\n \t Precio: " + to_string(precio) + "\n\t Anio: " + to_string(anio) + '\n'; }
+    string save() { return "\n" + modelo + ',' + tipo + ',' + color + ',' + to_string(anio) + ',' + to_string(precio); }
 };
 
 #endif // !__CAR_H__
